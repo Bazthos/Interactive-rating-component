@@ -13,11 +13,18 @@ function rate(){
 }
 
 let submit = document.querySelector(".submit");
-
+submit.addEventListener('pointerover', () => {
+    submit.style.backgroundColor = 'white';
+    submit.style.color = 'hsl(25, 97%, 53%)';
+});
+submit.addEventListener('pointerout', () => {
+    submit.style.backgroundColor = 'hsl(25, 97%, 53%)';
+    submit.style.color = 'white';
+});
 submit.addEventListener('click', () => {
     rate();
     toggle();
-})
+});
 
 /*Click event on <p> elemetn*/
 
