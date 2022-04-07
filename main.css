@@ -1,0 +1,262 @@
+/* Start styling the attribution */
+.attribution { 
+    position: fixed;
+    bottom: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem; 
+    line-height: 1.6;
+    text-align: center; 
+    color:hsl(220, 15%, 55%);
+    width: 100%;
+}
+.attribution a { 
+    color: var(--Soft-blue);
+}
+.attribution a:hover{
+    color: var(--Cyan);
+    transition: color .3s;
+}
+
+/* Screen reader class to hide the content visually */
+.sr-only {
+    position: absolute !important;
+    margin: -1px !important;
+    -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+    border: 0 !important;
+    padding: 0 !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+
+/*CSS restart*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*General adjustement*/
+html{
+    font-family: 'Overpass', sans-serif;
+    font-size: 100%;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.rate > .clicked{
+    background-color: hsl(25, 97%, 53%);
+    font-weight: 700;
+    color: white;
+}
+
+/*Background and container*/
+body{
+    background-color: hsl(216, 12%, 8%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+body .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20.5rem;
+    height: 22.5rem;
+    padding: 1.5rem;
+    background-image: radial-gradient(circle at top,hsla(213, 19%, 18%, 1),hsla(213, 19%, 18%, 0.4));
+    border-radius: 1rem;
+    color: white;
+}
+
+/*Start rate*/
+main .start{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 19.5rem;
+}
+
+main .start > img{
+    width: 2.5rem;
+    padding: 0.8rem;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 50%;
+}
+
+.start > h2{
+    font-size: 1.5rem;
+    /* font-weight: 400; */
+    margin-top: -0.5rem;
+}
+
+.start > p{
+    margin-top: -1rem;
+    font-size: 0.875rem;
+    color: hsl(216, 12%, 54%);
+    line-height: 1.4rem;
+}
+
+.start .rate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:hsl(216, 12%, 54%);
+}
+
+.rate > p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(213, 19%, 18%);
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.start .submit{
+    margin-top: -0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    letter-spacing: 0.1rem;
+    color: white;
+    font-size: 0.875rem;
+
+    width: inherit;
+    height: 2.8rem;
+    background-color: hsl(25, 97%, 53%);
+    border-radius: 1.5rem;
+}
+
+/*End rate*/
+main .end{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 18.2rem;
+}
+
+.end > img{
+    width: 9rem;
+}
+
+.end .select{
+    color: hsla(25, 97%, 53%, 0.6);
+    background-color: hsl(213, 19%, 22%);
+    font-size: 0.875rem;
+    padding: 0.4rem 0.8rem 0.2rem;
+    border-radius: 1rem;
+    margin-top: 0.2rem;
+}
+
+.end > h2{
+    margin-bottom: -0.7rem;
+    padding-top: 0.5rem;
+}
+
+.end > p{
+    color:hsl(216, 12%, 54%);
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.6rem;
+}
+
+/*Desktop design*/
+@media screen and (min-width: 980px){
+    body .container{
+        width: 25.7rem;
+        height: 26rem;
+        padding: 2rem 2.3rem 1.7rem 2rem;
+        border-radius: 1.8rem;
+    }
+
+    /*Start rate*/
+    main .start{
+        height: 22.5rem;
+    }
+
+    main .start > img{
+        width: 3rem;
+        padding: 0.95rem;
+    }
+
+    .start > h2{
+        font-size: 1.725rem;
+    }
+
+    .start > p{
+        margin-top: -1.8rem;
+        font-size: 0.95rem;
+        color: hsl(216, 12%, 54%);
+        line-height: 1.5rem;
+    }
+
+    .rate{
+        margin-top: -1rem;
+    }
+
+    .rate > p{
+        width: 3.2rem;
+        height: 3.2rem;
+
+        font-size: 1rem;
+    }
+
+    .start .submit{
+        font-size: 1rem;
+    }
+
+    /*End rate*/
+    main .end{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 20.2rem;
+    }
+
+    .end > img{
+        width: 10rem;
+    }
+
+    .end .select{
+        font-size: 0.95rem;
+        padding: 0.4rem 1rem 0.2rem;
+        margin-top: 0.2rem;
+    }
+
+    .end > h2{
+        font-size: 1.7rem;
+        margin-bottom: -1rem;
+    }
+
+    .end > p{
+        font-size: 0.95rem;
+        line-height: 1.5rem;
+        padding-bottom: 0rem;
+    }
+
+    /*Hover*/
+    .rate > .hover{
+        font-weight: 700;
+        color: white;
+        background-color: hsl(217, 12%, 63%);
+    }
+}
